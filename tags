@@ -8,18 +8,23 @@ Application	/Users/kitlangton/Viking/Unit8/gemrater/config/application.rb	/^  cl
 ApplicationController	/Users/kitlangton/Viking/Unit8/gemrater/app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
 ApplicationHelper	/Users/kitlangton/Viking/Unit8/gemrater/app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
 CreateRubyGems	/Users/kitlangton/Viking/Unit8/gemrater/db/migrate/20160122174444_create_ruby_gems.rb	/^class CreateRubyGems < ActiveRecord::Migration$/;"	c
+GemCreator	/Users/kitlangton/Viking/Unit8/gemrater/app/services/gem_creator.rb	/^module GemCreator$/;"	m
+GemSearcher	/Users/kitlangton/Viking/Unit8/gemrater/app/services/gem_searcher.rb	/^module GemSearcher$/;"	m
 Gemrater	/Users/kitlangton/Viking/Unit8/gemrater/config/application.rb	/^module Gemrater$/;"	m
 RubyGem	/Users/kitlangton/Viking/Unit8/gemrater/app/models/ruby_gem.rb	/^class RubyGem < ActiveRecord::Base$/;"	c
 RubyGemsController	/Users/kitlangton/Viking/Unit8/gemrater/app/controllers/ruby_gems_controller.rb	/^class RubyGemsController < ApplicationController$/;"	c
 RubyGemsHelper	/Users/kitlangton/Viking/Unit8/gemrater/app/helpers/ruby_gems_helper.rb	/^module RubyGemsHelper$/;"	m
 change	/Users/kitlangton/Viking/Unit8/gemrater/db/migrate/20160122174444_create_ruby_gems.rb	/^  def change$/;"	f	class:CreateRubyGems
 create	/Users/kitlangton/Viking/Unit8/gemrater/app/controllers/ruby_gems_controller.rb	/^  def create$/;"	f	class:RubyGemsController
+create	/Users/kitlangton/Viking/Unit8/gemrater/app/services/gem_creator.rb	/^  def self.create(name)$/;"	F	class:GemCreator
 destroy	/Users/kitlangton/Viking/Unit8/gemrater/app/controllers/ruby_gems_controller.rb	/^  def destroy$/;"	f	class:RubyGemsController
 edit	/Users/kitlangton/Viking/Unit8/gemrater/app/controllers/ruby_gems_controller.rb	/^  def edit$/;"	f	class:RubyGemsController
 index	/Users/kitlangton/Viking/Unit8/gemrater/app/controllers/ruby_gems_controller.rb	/^  def index$/;"	f	class:RubyGemsController
 new	/Users/kitlangton/Viking/Unit8/gemrater/app/controllers/ruby_gems_controller.rb	/^  def new$/;"	f	class:RubyGemsController
 ruby_gem_params	/Users/kitlangton/Viking/Unit8/gemrater/app/controllers/ruby_gems_controller.rb	/^    def ruby_gem_params$/;"	f	class:RubyGemsController
 search	/Users/kitlangton/Viking/Unit8/gemrater/app/controllers/ruby_gems_controller.rb	/^  def search$/;"	f	class:RubyGemsController
+search	/Users/kitlangton/Viking/Unit8/gemrater/app/services/gem_searcher.rb	/^  def self.search(name)$/;"	F	class:GemSearcher
 set_ruby_gem	/Users/kitlangton/Viking/Unit8/gemrater/app/controllers/ruby_gems_controller.rb	/^    def set_ruby_gem$/;"	f	class:RubyGemsController
 show	/Users/kitlangton/Viking/Unit8/gemrater/app/controllers/ruby_gems_controller.rb	/^  def show$/;"	f	class:RubyGemsController
+show_gem	/Users/kitlangton/Viking/Unit8/gemrater/app/controllers/ruby_gems_controller.rb	/^  def show_gem$/;"	f	class:RubyGemsController
 update	/Users/kitlangton/Viking/Unit8/gemrater/app/controllers/ruby_gems_controller.rb	/^  def update$/;"	f	class:RubyGemsController

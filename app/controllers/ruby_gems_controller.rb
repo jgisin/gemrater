@@ -17,9 +17,14 @@ class RubyGemsController < ApplicationController
     @ruby_gem = RubyGem.new
   end
 
+  # GET /ruby_gems/gem/
+  def show_gem
+    @ruby_gem = GemCreator.create(params[:name])
+  end
+
   # GET /ruby_gems/search
   def search
-
+    @ruby_gems = GemSearcher.search(params[:name])
   end
 
   # GET /ruby_gems/1/edit
@@ -74,6 +79,6 @@ class RubyGemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ruby_gem_params
-      params.require(:ruby_gem).permit(:name, :version, :gem_uri, :homepage_uri)
+      params.require(:ruby_gem).permit(:name, :version, :author, :information, :project_uri, :homepage_uri)
     end
 end

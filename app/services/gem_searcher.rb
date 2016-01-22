@@ -2,23 +2,21 @@ module GemSearcher
 
   def self.search(name)
     list = Gems.search(name)
-    list.map do |gem|
-      if gem = RubyGem.find(name: gem['name'])
+    list.map do |json|
+      if gem = RubyGem.where(name: json['name'])[0]
         gem
       else
-        gem = RubyGem.new(name: gem['name'], gem_uri: gem['project_uri'], homepage_uri: gem['homepage_uri'], version: gem['version'] authors: gem['authors'], information: gem['information'])
+        RubyGem.new({
+          name: json['name'],
+          project_uri: json['project_uri'],
+          homepage_uri: json['homepage_uri'],
+          version: json['version'],
+          author: json['authors'],
+          information: json['info']
+        })
       end
     end
   end
-
-  def return_gem
-
-  end
-
-  def search_db
-  end
-
-
 
 end
 
