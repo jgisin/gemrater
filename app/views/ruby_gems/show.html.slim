@@ -1,0 +1,18 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @ruby_gem.name
+p
+  strong Version:
+  = @ruby_gem.version
+p
+  strong Gem uri:
+  = @ruby_gem.gem_uri
+p
+  strong Homepage uri:
+  = @ruby_gem.homepage_uri
+
+= link_to 'Edit', edit_ruby_gem_path(@ruby_gem)
+'|
+= link_to 'Back', ruby_gems_path
