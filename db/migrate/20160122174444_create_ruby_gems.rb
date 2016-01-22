@@ -3,8 +3,10 @@ class CreateRubyGems < ActiveRecord::Migration
     create_table :ruby_gems do |t|
       t.string :name
       t.string :version
-      t.string :gem_uri
+      t.string :project_uri
       t.string :homepage_uri
+      t.string :author
+      t.string :information
 
       t.timestamps null: false
     end

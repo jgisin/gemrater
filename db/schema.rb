@@ -19,8 +19,10 @@ ActiveRecord::Schema.define(version: 20160122174444) do
   create_table "ruby_gems", force: :cascade do |t|
     t.string   "name"
     t.string   "version"
-    t.string   "gem_uri"
+    t.string   "project_uri"
     t.string   "homepage_uri"
+    t.string   "author"
+    t.string   "information"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
