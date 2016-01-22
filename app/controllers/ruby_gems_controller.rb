@@ -17,6 +17,11 @@ class RubyGemsController < ApplicationController
     @ruby_gem = RubyGem.new
   end
 
+  # GET /ruby_gems/search
+  def search
+
+  end
+
   # GET /ruby_gems/1/edit
   def edit
   end

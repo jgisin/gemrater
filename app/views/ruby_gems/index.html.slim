@@ -1,27 +1,28 @@
-h1 Listing ruby_gems
+.container
+  h1 Listing ruby_gems
 
-table
-  thead
-    tr
-      th Name
-      th Version
-      th Gem uri
-      th Homepage uri
-      th
-      th
-      th
-
-  tbody
-    - @ruby_gems.each do |ruby_gem|
+  table.table
+    thead
       tr
-        td = ruby_gem.name
-        td = ruby_gem.version
-        td = ruby_gem.gem_uri
-        td = ruby_gem.homepage_uri
-        td = link_to 'Show', ruby_gem
-        td = link_to 'Edit', edit_ruby_gem_path(ruby_gem)
-        td = link_to 'Destroy', ruby_gem, data: {:confirm => 'Are you sure?'}, :method => :delete
+        th Name
+        th Version
+        th Gem uri
+        th Homepage uri
+        th
+        th
+        th
 
-br
+    tbody
+      - @ruby_gems.each do |ruby_gem|
+        tr
+          td = ruby_gem.name
+          td = ruby_gem.version
+          td = ruby_gem.gem_uri
+          td = ruby_gem.homepage_uri
+          td = link_to 'Show', ruby_gem
+          td = link_to 'Edit', edit_ruby_gem_path(ruby_gem)
+          td = link_to 'Destroy', ruby_gem, data: {:confirm => 'Are you sure?'}, :method => :delete
 
-= link_to 'New Ruby gem', new_ruby_gem_path
+  br
+
+  = link_to 'New Ruby gem', new_ruby_gem_path

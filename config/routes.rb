@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :ruby_gems
+  get 'ruby_gems/:name' => 'ruby_gems#search', as: :search
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
