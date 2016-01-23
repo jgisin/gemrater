@@ -1,12 +1,16 @@
 Rails.application.routes.draw do
+
+
   get 'ruby_gems/search' => 'ruby_gems#search', as: :search
   get 'ruby_gems/gem/:name' => 'ruby_gems#show_gem', as: :show_gem
-  resources :ruby_gems
+  resources :ruby_gems do
+    resources :gists   
+  end 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+   root 'ruby_gems#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

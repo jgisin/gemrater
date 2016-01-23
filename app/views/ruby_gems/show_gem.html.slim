@@ -1,24 +1,23 @@
-p#notice = notice
+.jumbotron  
+  .container
+    h1 
+      a href=@ruby_gem.homepage_uri =@ruby_gem.name
+      small =@ruby_gem.version
+.container
+  .row
+    .col-md-8    
+      p id="author"
+        | created by  
+        = @ruby_gem.author
+      .well
+        = @ruby_gem.information
+        br
+        a href=@ruby_gem.project_uri =@ruby_gem.project_uri
 
-p
-  strong Name:
-  = @ruby_gem.name
-p
-  strong Version:
-  = @ruby_gem.version
-p
-  strong Gem uri:
-  = @ruby_gem.author
-p
-  strong Gem uri:
-  = @ruby_gem.information
-p
-  strong Gem uri:
-  = @ruby_gem.project_uri
-p
-  strong Homepage uri:
-  = @ruby_gem.homepage_uri
-
-= link_to 'Edit', edit_ruby_gem_path(@ruby_gem)
-'|
-= link_to 'Back', ruby_gems_path
+      - @ruby_gem.gists.each do |gist|
+        = render gist    
+      = link_to "Add Gist", new_ruby_gem_gist_path(@ruby_gem)
+      '|
+      = link_to 'Edit', edit_ruby_gem_path(@ruby_gem)
+      '|
+      = link_to 'Back', ruby_gems_path

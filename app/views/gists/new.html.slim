@@ -1,0 +1,13 @@
+= form_for [@ruby_gem, @gist] do |f|
+  - if @gist.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@gist.errors.count, "error")} prohibited this gist from being saved:"
+      ul
+        - @gist.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :gist_uri
+    = f.text_field :gist_uri
+
+  .actions = f.submit

@@ -1,2 +1,18 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+#author {
+  font-style: italic;
+  font-family: arial;
+
+}
+
+#title {
+  font-family: 'Dancing Script', Georgia, Times, serif;
+  font-size: 250px;
+  line-height: 60px;
+  margin-top: 20%;
+}
+
+.index-background {
+  background-color: #556B2F;
+}

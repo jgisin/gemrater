@@ -11,10 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160122174444) do
+ActiveRecord::Schema.define(version: 20160122221225) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "gists", force: :cascade do |t|
+    t.integer  "ruby_gem_id"
+    t.string   "gist_uri"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "gists", ["ruby_gem_id"], name: "index_gists_on_ruby_gem_id", using: :btree
 
   create_table "ruby_gems", force: :cascade do |t|
     t.string   "name"
@@ -27,4 +36,5 @@ ActiveRecord::Schema.define(version: 20160122174444) do
     t.datetime "updated_at",   null: false
   end
 
+  add_foreign_key "gists", "ruby_gems"
 end
